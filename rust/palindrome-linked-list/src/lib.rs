@@ -24,23 +24,10 @@ fn is_palindrome(head: Option<Box<ListNode>>) -> bool {
         node_opt = &node.next;
     }
 
-    node_opt = &head;
-
-    for &rev_val in vec.iter().rev().take(vec.len() / 2) {
-        let node = if let Some(node) = &node_opt {
-            node
-        } else {
-            return false;
-        };
-
-        if node.val != rev_val {
-            return false;
-        }
-
-        node_opt = &node.next;
-    }
-
-    true
+    vec.iter()
+        .take(vec.len() / 2)
+        .zip(vec.iter().rev().take(vec.len() / 2))
+        .all(|(a, b)| a == b)
 }
 
 fn make_list(nums: &[i32]) -> Option<Box<ListNode>> {
