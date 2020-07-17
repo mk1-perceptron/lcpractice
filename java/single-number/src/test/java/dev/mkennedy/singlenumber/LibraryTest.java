@@ -6,19 +6,19 @@ package dev.mkennedy.singlenumber;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class AppTest {
+class LibraryTest {
     @Test
-    void testOne() {
-        int[] nums = {2, 2, 1};
-        int result = App.singleNumber(nums);
+    void exampleOne() {
+        int[] input = {2, 2, 1};
+        int result = Library.singleNumber(input);
 
         assertEquals(1, result);
     }
 
     @Test
-    void testTwo() {
-        int[] nums = {4, 1, 2, 1, 2};
-        int result = App.singleNumber(nums);
+    void exampleTwo() {
+        int[] input = {4, 1, 2, 1, 2};
+        int result = Library.singleNumber(input);
 
         assertEquals(4, result);
     }
