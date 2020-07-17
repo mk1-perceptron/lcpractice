@@ -1,11 +1,11 @@
+//! Longest Substring Without Repeating Characters
+//!
+//! Given a string, find the length of the longest substring without repeating characters.
+
 use std::cmp;
 use std::collections::HashMap;
 
-fn main() {
-    println!("Hello, world!");
-}
-
-fn length_of_longest_substring(s: String) -> i32 {
+pub fn length_of_longest_substring(s: String) -> i32 {
     let mut i = 0;
     let mut max = 0i32;
     let mut seen = HashMap::with_capacity(s.len());

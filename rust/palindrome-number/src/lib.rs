@@ -1,8 +1,9 @@
-fn main() {
-    println!("Hello, world!");
-}
+//! Palindrome Number
+//!
+//! Determine whether an integer is a palindrome. An integer is a palindrome when it reads the
+//! same backward as forward.
 
-fn is_palindrome(x: i32) -> bool {
+pub fn is_palindrome(x: i32) -> bool {
     if x < 0 || (x % 10 == 0 && x != 0) {
         return false;
     }

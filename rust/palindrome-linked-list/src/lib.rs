@@ -1,3 +1,7 @@
+//! Palindrome Linked List
+//!
+//! Given a singly linked list, determine if it is a palindrome.
+
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
     pub val: i32,
@@ -6,12 +10,12 @@ pub struct ListNode {
 
 impl ListNode {
     #[inline]
-    fn new(val: i32) -> Self {
+    pub fn new(val: i32) -> Self {
         ListNode { val, next: None }
     }
 }
 
-fn is_palindrome(head: Option<Box<ListNode>>) -> bool {
+pub fn is_palindrome(head: Option<Box<ListNode>>) -> bool {
     if head.is_none() {
         return true;
     }
@@ -30,7 +34,7 @@ fn is_palindrome(head: Option<Box<ListNode>>) -> bool {
         .all(|(a, b)| a == b)
 }
 
-fn make_list(nums: &[i32]) -> Option<Box<ListNode>> {
+pub fn make_list(nums: &[i32]) -> Option<Box<ListNode>> {
     let mut pre_head = Box::new(ListNode::new(0));
     let mut cur = &mut pre_head;
 

@@ -1,4 +1,9 @@
-fn longest_common_prefix(strs: Vec<String>) -> String {
+//! Longest Common Prefix
+//!
+//! Write a function to find the longest common prefix string amongst an array of strings.
+//! If there is no common prefix, return an empty string "".
+
+pub fn longest_common_prefix(strs: Vec<String>) -> String {
     if strs.is_empty() {
         return "".to_owned();
     }

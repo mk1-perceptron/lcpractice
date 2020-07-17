@@ -1,8 +1,12 @@
-fn main() {
-    println!("Hello, world!");
-}
+//! Remove Element
+//!
+//! Given an array nums and a value val, remove all instances of that value in-place and return the
+//! new length.
+//! Do not allocate extra space for another array, you must do this by modifying the input array
+//! in-place with O(1) extra memory.
+//! The order of elements can be changed. It doesn't matter what you leave beyond the new length.
 
-fn remove_element(nums: &mut Vec<i32>, val: i32) -> i32 {
+pub fn remove_element(nums: &mut Vec<i32>, val: i32) -> i32 {
     let mut end_index = 0;
 
     for i in 0..nums.len() {
@@ -20,7 +24,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_one() {
+    fn example_one() {
         let mut nums = vec![3, 2, 2, 3];
         let val = 3;
         let result = remove_element(&mut nums, val);
@@ -29,7 +33,7 @@ mod tests {
     }
 
     #[test]
-    fn test_two() {
+    fn example_two() {
         let mut nums = vec![0, 1, 2, 2, 3, 0, 4, 2];
         let val = 2;
         let result = remove_element(&mut nums, val);
