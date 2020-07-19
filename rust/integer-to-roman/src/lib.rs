@@ -41,8 +41,7 @@ pub fn int_to_roman(num: i32) -> String {
 
 fn handle_digit(rev_num: &mut Vec<char>, one: char, five: char, ten: char, digit: i32) {
     match digit {
-        0 => (),
-        1..=3 => {
+        0..=3 => {
             for _ in 0..digit {
                 rev_num.push(one);
             }
